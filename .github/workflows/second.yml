@@ -2,11 +2,13 @@ name: first
 
 on: 
     push:
-        branches: using_an_action_from_marketplace
+        branches: market_place_workflow
 
 jobs:
     job1:
         runs-on: ubuntu-latest
         steps:
+            - name: Check out the code
+              uses: actions/checkout@v2
             - name: Python Syntax Checker
               uses: cclauss/Find-Python-syntax-errors-action@v0.2.0
