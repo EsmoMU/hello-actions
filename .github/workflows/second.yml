@@ -1,0 +1,10 @@
+name: first
+
+on: 
+    push:
+        branches: using_an_action_from_marketplace
+
+jobs:
+    job1:
+        name: Python Syntax Checker
+        uses: cclauss/Find-Python-syntax-errors-action@v0.2.0
