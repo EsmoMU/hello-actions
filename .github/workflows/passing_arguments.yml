@@ -9,6 +9,10 @@ jobs:
         name: First Job
         runs-on: ubuntu-latest
         steps:
+            - name: initial
+              run: |
+                "ls -al"
+                "java -version"
             - name: Step one
               uses: actions/checkout@v2
               with:
@@ -21,6 +25,9 @@ jobs:
                   java-version: '9.0.4'
                   java-package: jdk
                   architecture: x64
+            
             - name: Step two
-              run: "ls -al"
+              run: |
+                "ls -al"
+                "java -version"
                 
