@@ -1,5 +1,5 @@
 from datetime import date
-
+# Python is fun
 start = date(2020, 1, 1)
 today = date.today()
 delta = today - start
