@@ -11,8 +11,8 @@ jobs:
         steps:
             - name: initial
               run: |
-                "ls -a"
-                "java -version"
+                ls -a
+                java -version
             - name: Step one
               uses: actions/checkout@v2
               with:
@@ -28,6 +28,6 @@ jobs:
             
             - name: Step two
               run: |
-                "ls -al"
-                "java -version"
+                ls -al
+                java -version
                 
