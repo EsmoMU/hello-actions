@@ -1,0 +1,27 @@
+name: passing_arguments
+
+on: 
+    push:
+        branches: passing_arguments_to_an_action
+
+jobs:
+    job1:
+        name: First Job
+        runs-on: ubuntu-latest
+        steps:
+            - name: Step one
+              uses: actions/checkout@v2
+              with:
+                repository: apache/tomcat
+                ref: master
+                path: ./tomcat
+            - name: Step two
+              run: actions/setup-java@v1
+    job2:
+        name: Second Job
+        runs-on: windows-latest
+        steps:
+            - name: Step one
+              uses: actions/checkout@v2
+            - name: Step two
+              run: "Get-ChildItem Env: | Sort-Object Name"
