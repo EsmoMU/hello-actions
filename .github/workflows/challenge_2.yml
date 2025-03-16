@@ -1,0 +1,25 @@
+name: challenge_2
+
+on: 
+    push:
+        branches: challange_2
+env:
+    artificat_name: challenge_2
+jobs:
+    job1:
+        runs-on: ubuntu-latest
+        steps:
+            - name: checkout the code from the repo
+              uses: actions/checkout@v2
+
+            - name: after initial
+              run: |
+                pwd
+                ls -a
+
+            - name: uploads artifact action
+              uses: actions/upload-artifact@v4
+              with:
+                name: ${{ env.artificat_name }}
+                path: ./.github/workflows/${{ env.artificat_name }}.yml
+               
